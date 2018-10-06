@@ -3,28 +3,30 @@ import UserForm from './UserForm'
 import UserList from './UserList';
 
 class UserRegister extends Component{
+
     state = {
-        name:'',
-        lastname:''
+        userList: [
+            {id: 1, firstName: 'Ernesto', lastName: 'Villaseñor'},
+            {id: 2, firstName: 'Ernesto', lastName: 'Villaseñor'}
+        ]
     }
-    // handleChange(event){
-    //     const target = event.target;
-    //     const name = target.name;
-    //     this.setState({
-    //         [name]: target.value
-    //     })
-    //     console.log(this.state)
-    // }
-    handleSubmit(user){
-        console.log("desde user register: ", user);
+
+    handleSubmit =(user)=>{
         
+        this.setState({userList: [user, ...this.state.userList]})
+    }
+
+    handleList(){
+        this.setState({
+            userList: this.handleSubmit
+        })
     }
 
     render(){
         return(
             <div>
                 <UserForm onSubmit={this.handleSubmit}/>
-                <UserList />
+                <UserList userList={this.state.userList}></UserList>
             </div>
         )
     };

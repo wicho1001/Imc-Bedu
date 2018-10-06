@@ -1,16 +1,9 @@
 import React from 'react';
+import UserRegister from './UserRegister'
 
-
-function UserItem(){
+function UserItem(props){
     return(
-        <div>
-            <li>
-                Ejemplo:1 
-            </li>
-            <li>
-                Ejemplo:2
-            </li>
-        </div>
+        <p>{JSON.stringify(props.user)}</p>
     );
 }
 

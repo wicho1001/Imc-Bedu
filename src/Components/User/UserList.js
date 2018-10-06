@@ -2,11 +2,13 @@ import React from 'react';
 import UserItem from './UserItem'
 
 
-function UserList(){
+const UserList = (props) => {
+    
     return(
         <div>
             <ul>
-                <UserItem/>
+                {props.userList.map(user => <UserItem user={user} />)}
+                
             </ul>
         </div>
     );
