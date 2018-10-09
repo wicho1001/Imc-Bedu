@@ -1,20 +1,51 @@
-import React from 'react'
+import React,{Component} from 'react'
+import ImcResults from './ImcResults'
 
+class ImcForm extends Component{
+    constructor(props){
+        super(props)
+        this.state = {
+             
+                altura:'',
+                peso:'',
+                imc:8
+            
+        }
 
-function ImcForm(){
+    }
+
+    handleChange = (evt)=>{
+        this.setState({
+            [evt.target.name]: evt.target.value
+        })
+    }
+    calcBMI = (evt) => {
+        evt.preventDefault();
+        let BMI = this.state.peso/(this.state.altura * this.state.altura);
+            this.setState({
+                imc:BMI
+        })         
+    }
+    imprimir = ()=>{
+
+        console.log(this.state.imc);
+        console.log(this.props);
+    }
+
+    render(){
+        this.imprimir()
     return(
-<div>
-    <div >     
         <div >
-        <h1>Resgistro de Pacientes</h1>
-        <input type="text" placeholder="Altura"/>
-        <input type="text" placeholder="Peso"/>
-        <button>Calcular</button>
+            <h1>Resgistro de Pacientes</h1>
+            <form onSubmit={this.calcBMI} name='imc'>
+                <input onChange={this.handleChange} name='altura' value={this.state.altura} type="text" placeholder="Altura"/>
+                <input onChange={this.handleChange} name='peso' value={this.state.peso} type="text" placeholder="Peso"/>
+                <button>Calcular</button>
+            </form>
+            <h1 value={this.state.imc}>{this.state.imc}</h1>
         </div>
-  </div>
-</div>
     )
-
+    }
 }
 
 export default ImcForm;

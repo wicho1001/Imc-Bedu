@@ -5,13 +5,27 @@ import ImcResults from './ImcResults'
 
 
 class ImcRegister extends Component{
+
+    // state = {
+    //     data:[
+    //         { imc:50}
+    //     ]
+    // }
+
+    // imprimirState =()=>{
+    //     console.log(this.props);
+    
+    // }
+    
+    
     render(){
+        // this.imprimirState();
         return(
             
             <div>
-                <UserDetail/>
-                <ImcForm/>
-                <ImcResults/>
+                <UserDetail  />
+                <ImcForm onSubmit={} />
+                <ImcResults  />
             </div>
         )
     };

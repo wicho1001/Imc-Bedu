@@ -6,7 +6,8 @@ import './UserFormStyles/UserForm.css'
 class UserForm extends Component{
     state={
         firstName:'',
-        lastName:''
+        lastName:'',
+        id:''
     }
     handleChange=(evt)=>{
         this.setState({
