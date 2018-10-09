@@ -24,7 +24,11 @@ class ImcRegister extends Component{
             
             <div>
                 <UserDetail  />
+<<<<<<< HEAD
                 <ImcForm onSubmit />
+=======
+                <ImcForm onSubmit={} />
+>>>>>>> d6aad80db3956d5447f675cc25dc855ea7367ddf
                 <ImcResults  />
             </div>
         )

@@ -2,11 +2,23 @@ import React,{Component} from 'react'
 import ImcResults from './ImcResults'
 
 class ImcForm extends Component{
+<<<<<<< HEAD
     state = {
          
             altura:'',
             peso:'',
             imc:this.props.imc
+=======
+    constructor(props){
+        super(props)
+        this.state = {
+             
+                altura:'',
+                peso:'',
+                imc:8
+            
+        }
+>>>>>>> d6aad80db3956d5447f675cc25dc855ea7367ddf
 
     }
 
@@ -25,7 +37,11 @@ class ImcForm extends Component{
     imprimir = ()=>{
 
         console.log(this.state.imc);
+<<<<<<< HEAD
         console.log(this.props.state);
+=======
+        console.log(this.props);
+>>>>>>> d6aad80db3956d5447f675cc25dc855ea7367ddf
     }
 
     render(){
