@@ -1,11 +1,12 @@
 import React from 'react';
+import ImcForm from './ImcForm'
 
-function ImcResults(){
+function ImcResults(props){
     return(
         <div>
-            <h2>
-                Resultados
-            </h2>
+            <h1>
+               {props.ImcForm} 
+            </h1>
         </div>
     );
 }

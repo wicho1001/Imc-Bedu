@@ -16,12 +16,6 @@ class UserRegister extends Component{
         this.setState({userList: [user, ...this.state.userList]})
     }
 
-    handleList(){
-        this.setState({
-            userList: this.handleSubmit
-        })
-    }
-
     render(){
         return(
             <div>
